@@ -1,5 +1,4 @@
 object Task1 extends App {
-
   def getWeekDayNames(): String = {
     val weekDays = List("Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela")
     val delimiter = ","
