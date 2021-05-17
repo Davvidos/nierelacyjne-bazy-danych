@@ -1,6 +1,5 @@
 object Task1 extends App {
-  def getWeekDayNames(): String = {
-    val weekDays = List("Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela")
+  def getWeekDayNames(weekDays: List[String]): String = {
     val delimiter = ","
     var result: String = ""
 
@@ -15,8 +14,7 @@ object Task1 extends App {
     result
   }
 
-  def getDayNamesStartingWithLetterP(): String = {
-    val weekDays = List("Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela")
+  def getDayNamesStartingWithLetterP(weekDays: List[String]): String = {
     val weekDaysStartingWithLetterP = for { day <- weekDays if day.startsWith("P")} yield day
     val delimiter = ","
     var result: String = ""
@@ -32,8 +30,7 @@ object Task1 extends App {
     result
   }
 
-  def getWeekDayNamesUsingWhileLoop(): String = {
-    val weekDays = List("Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela")
+  def getWeekDayNamesUsingWhileLoop(weekDays: List[String]): String = {
     val delimiter = ","
     var result: String = ""
     var i = 0
@@ -52,7 +49,9 @@ object Task1 extends App {
     result
   }
 
-  println(getWeekDayNames())
-  println(getDayNamesStartingWithLetterP())
-  println(getWeekDayNamesUsingWhileLoop())
+  val weekDays = List("Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela")
+
+  println(getWeekDayNames(weekDays))
+  println(getDayNamesStartingWithLetterP(weekDays))
+  println(getWeekDayNamesUsingWhileLoop(weekDays))
 }

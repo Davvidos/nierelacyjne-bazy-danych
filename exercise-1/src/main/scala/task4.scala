@@ -1,21 +1,21 @@
 object Task4 extends App {
   val daysOfWeek = List("Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela")
 
-  def generateWeekDayNamesUsingFoldl(daysOfWeek: List[String]): String = {
+  def generateWeekDayNamesUsingFoldLeft(daysOfWeek: List[String]): String = {
     daysOfWeek.foldLeft("") {
       (x, day) =>
         x + (if(day == daysOfWeek.head) day else ", " + day)
     }
   }
 
-  def generateWeekDayNamesUsingFoldr(daysOfWeek: List[String]): String = {
+  def generateWeekDayNamesUsingFoldRight(daysOfWeek: List[String]): String = {
     daysOfWeek.foldRight("") {
       (day, x) =>
         day + (if(day == daysOfWeek.last) x else ", " + x)
     }
   }
 
-  def generateWeekDayNamesStartingWithLetterPUsingFoldl(daysOfWeek: List[String]): String = {
+  def generateWeekDayNamesStartingWith_P_LetterUsingFoldLeft(daysOfWeek: List[String]): String = {
     daysOfWeek.foldLeft("") {
       (x, day) =>
         if(day.startsWith("P"))
@@ -25,7 +25,7 @@ object Task4 extends App {
     }
   }
 
-  println(generateWeekDayNamesUsingFoldl(daysOfWeek))
-  println(generateWeekDayNamesUsingFoldr(daysOfWeek))
-  println(generateWeekDayNamesStartingWithLetterPUsingFoldl(daysOfWeek))
+  println(generateWeekDayNamesUsingFoldLeft(daysOfWeek))
+  println(generateWeekDayNamesUsingFoldRight(daysOfWeek))
+  println(generateWeekDayNamesStartingWith_P_LetterUsingFoldLeft(daysOfWeek))
 }
