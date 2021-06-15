@@ -1,0 +1,48 @@
+1. MATCH (movie: Movie) RETURN movie
+2. MATCH (hugo: Person {name: "Hugo Weaving"})-[:ACTED_IN]->(hugoWeavingMovies) RETURN hugo,hugoWeavingMovies
+3. MATCH (hugo: Person {name: "Hugo Weaving"})-[:ACTED_IN]->(hugoWeavingMovies)<-[:DIRECTED]-(directors) RETURN directors
+4. MATCH (hugo: Person {name:"Hugo Weaving"})-[:ACTED_IN]->(m)<-[:ACTED_IN]-(coActors) RETURN coActors
+5. MATCH (matrixActorsMovies: Movie)<-[:ACTED_IN]-(actor:Person)-[:ACTED_IN]->(movie:Movie {title: "The Matrix"}) RETURN matrixActorsMovies
+6. MATCH (actor:Person)-[:ACTED_IN]->(movie) WITH actor, COUNT(*) AS moviesCount WHERE moviesCount > 0 RETURN actor, moviesCount ORDER BY moviesCount
+7. MATCH (author: Person) -[:WROTE]-> (movie: Movie) <-[:DIRECTED]- (director: Person) WHERE author = director RETURN author, movie, director
+8. MATCH (hugo: Person {name: "Hugo Weaving"})-[:ACTED_IN]->(hugoMovies: Movie), (kanu:Person {name: "Keanu Reeves"})-[:ACTED_IN]->(kanuMovies: Movie) WHERE hugoMovies=kanuMovies RETURN hugoMovies
+9. CREATE (captainAmerica: Movie {title:"Captain America: The First Avenger", released: 2011, tagline: 'When Patriots Become Heroes'})
+   CREATE (chrisEvans: Person {name:'Chris Evans', born: 1981})
+   CREATE (hayleyAtwell: Person {name: 'Hayley Atwell', born: 1982})
+   CREATE (sebastianStan: Person {name: 'Sebastian Stan', born: 1982})
+   CREATE (tommyLeeJones: Person {name: 'Tommy Lee Jones', born: 1946})
+   CREATE (hugoWeaving: Person {name: 'Hugo Weaving', born: 1960})
+   CREATE (dominicCooper: Person {name: 'Dominic Cooper', born: 1978})
+   CREATE (richardArmitage: Person {name: 'Richard Armitage', born: 1971})
+   CREATE (stanleyTucci: Person {name: 'Stanley Tucci', born: 1960})
+   CREATE (samuelLJackson: Person {name: 'Samuel L. Jackson', born: 1948})
+   CREATE (tobyJones: Person {name: 'Toby Jones', born: 1966})
+   CREATE (nealMcDonough: Person {name: 'Neal McDonough', born: 1966})
+   CREATE (derekLuke: Person {name: 'Derek Luke', born: 1974})
+   CREATE (kennethChoi: Person {name: 'Kenneth Choi', born: 1971})
+   CREATE (jjFeild: Person {name: 'JJ Feild', born: 1978})
+   CREATE (brunoRicci: Person {name: 'Bruno Ricci'})
+   CREATE (joeJohnston: Person {name: 'Joe Johnston', born: 1950})
+   CREATE (christopherMarkus: Person {name: 'Christopher Markus', born: 1970})
+   CREATE (stephenMcFeely: Person {name: 'Stephen McFeely'})
+   CREATE
+   (chrisEvans)-[:ACTED_IN {roles:['Captain America / Steve Rogers']}]->(captainAmerica),
+   (hayleyAtwell)-[:ACTED_IN {roles:['Peggy Carter']}]->(captainAmerica),
+   (sebastianStan)-[:ACTED_IN {roles:['James Buchanan Barnes']}]->(captainAmerica),
+   (tommyLeeJones)-[:ACTED_IN {roles:['Colonel Chester Phillips']}]->(captainAmerica),
+   (hugoWeaving)-[:ACTED_IN {roles:['Johann Schmidt / Red Skull']}]->(captainAmerica),
+   (dominicCooper)-[:ACTED_IN {roles:['Howard Stark']}]->(captainAmerica),
+   (richardArmitage)-[:ACTED_IN {roles:['Heinz Kruger']}]->(captainAmerica),
+   (stanleyTucci)-[:ACTED_IN {roles:['Dr. Abraham Erskine']}]->(captainAmerica),
+   (samuelLJackson)-[:ACTED_IN {roles:['Nick Fury']}]->(captainAmerica),
+   (tobyJones)-[:ACTED_IN {roles:['Dr. Arnim Zola']}]->(captainAmerica),
+   (nealMcDonough)-[:ACTED_IN {roles:['Timothy Dugan']}]->(captainAmerica),
+   (derekLuke)-[:ACTED_IN {roles:['Gabe Jones']}]->(captainAmerica),
+   (kennethChoi)-[:ACTED_IN {roles:['Jim Morita']}]->(captainAmerica),
+   (jjFeild)-[:ACTED_IN {roles:['James Montgomery Falsworth']}]->(captainAmerica),
+   (brunoRicci)-[:ACTED_IN {roles:['Jacques Dernier']}]->(captainAmerica),
+   (joeJohnston)-[:DIRECTED]->(captainAmerica),
+   (christopherMarkus)-[:WROTE]->(captainAmerica),
+   (stephenMcFeely)-[:WROTE]->(captainAmerica)
+
+   MATCH (actors:Person)-[:ACTED_IN]->(captainAmerica:Movie {title: "Captain America: The First Avenger"})<-[:DIRECTED]-(director:Person), (writers:Person)-[:WROTE]->(captainAmerica) RETURN captainAmerica,actors,director,writers
