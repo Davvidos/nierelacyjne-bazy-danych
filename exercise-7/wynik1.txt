@@ -1,0 +1,61 @@
+TP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvl/J4CMIEUpkzGNl0Eu2u8WXBQA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22365>; rel="up"
+Last-Modified: Wed, 16 Jun 2021 11:57:34 GMT
+ETag: "76NqD40FwagPp9YXI8gIhe"
+Date: Wed, 16 Jun 2021 11:57:34 GMT
+Content-Type: application/json
+Content-Length: 80
+
+{"f1_string":"This is doc 1", "f2_number": 42, "f3_bool": true, "f4_null": null}
+
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvl/JyO8MEUpkzGNlOJhsd4svCwA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22365>; rel="up"
+Last-Modified: Wed, 16 Jun 2021 12:00:01 GMT
+ETag: "4RAFzZW0iz0nOI1O9s4d6M"
+Date: Wed, 16 Jun 2021 12:00:01 GMT
+Content-Type: application/json
+Content-Length: 107
+
+{"f1_string":"This is doc 2", "f2_number": 41, "f3_bool": false, "f4_array": ["Brat", "szybko", "wyszedl"]}
+
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvl/J8EIHyGbKYEpkzGNlME6xu8WXBQA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22365>; rel="up"
+Last-Modified: Wed, 16 Jun 2021 12:01:55 GMT
+ETag: "64ZrxneTmqebUVtUSvBEl4"
+Date: Wed, 16 Jun 2021 12:01:55 GMT
+Content-Type: application/json
+Content-Length: 111
+
+{"f1_string":"This is doc 3", "f2_number": 40, "f3_bool": true, "f4_arrray": ["Lukasz", "temperuje", "ol▒wek"]}
+
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvl/x1yUaIpTImMfKUJNid4svCwA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22365>; rel="up"
+Last-Modified: Wed, 16 Jun 2021 12:03:08 GMT
+ETag: "37be57PXrJ4dB0zeoCBg3g"
+Date: Wed, 16 Jun 2021 12:03:08 GMT
+Content-Type: application/json
+Content-Length: 108
+
+{"f1_string":"This is doc 4", "f2_number": 39, "f3_bool": false, "f4_array": ["Mama", "prasuje", "spodnie"]}
+
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvl/xn2MnRCiRMY+VYWKK3S2+LAA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22365>; rel="up"
+Last-Modified: Wed, 16 Jun 2021 12:03:29 GMT
+ETag: "55J3MfpPte9MziGGQ9t7Sf"
+Date: Wed, 16 Jun 2021 12:03:29 GMT
+Content-Type: application/json
+Content-Length: 79
+
+{"f1_string":"This is doc 5", "f2_number": 38, "f3_bool": true, "f4_array": []}
+

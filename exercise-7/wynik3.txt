@@ -1,0 +1,11 @@
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvl/J4CMIEUpkymNlsE61u8WXBQA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22365>; rel="up"
+Last-Modified: Wed, 16 Jun 2021 12:06:19 GMT
+ETag: "5JPJblAZVozkJjg1H3yYYK"
+Date: Wed, 16 Jun 2021 12:06:19 GMT
+Content-Type: application/json
+Content-Length: 116
+
+{"f1_string":"This is doc 1", "f2_number": 42, "f3_bool": true, "f4_null": null, "f5_extra_field": "Dodatkowe pole"}
