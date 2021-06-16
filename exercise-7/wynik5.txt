@@ -1,0 +1,11 @@
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvl/J8EIHyGbKYEpkymNlKE61u8WXBQA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22365>; rel="up"
+Last-Modified: Wed, 16 Jun 2021 12:07:15 GMT
+ETag: "18UbvPx5r0OndQfO0pf20O"
+Date: Wed, 16 Jun 2021 12:07:15 GMT
+Content-Type: application/json
+Content-Length: 111
+
+{"f1_string":"This is doc 3", "f2_number": 39, "f3_bool": true, "f4_arrray": ["Mama", "prasuje", "sp▒dniczke"]}
