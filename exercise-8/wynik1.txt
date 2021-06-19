@@ -1,0 +1,7 @@
+Key: 22365,
+Value: {"name": "Dawid", "lastname": "Jurczyński", "id": "22365", "active": True}
+Loaded:
+{"name": "Dawid", "lastname": "Jurczyński", "id": "22365", "active": True}
+Loaded after update:
+{"name": "Dawid", "lastname": "Jurczyński", "id": "22365", "active": False}
+Try to load deleted entry: None
